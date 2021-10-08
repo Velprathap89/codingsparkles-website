@@ -1,12 +1,25 @@
-import React from 'react';
-import { Box } from '@material-ui/core';
-import './Main.scss';
+import React from "react"
+import { Box, makeStyles } from "@material-ui/core"
 
+const useStyles = makeStyles(theme => ({
+  boxRoot: {
+    minHeight: "80vh",
+    marginTop: "64px",
+    padding: "1rem",
+
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "120px",
+    },
+  },
+}))
 const Main = props => {
-    return <div className="cs-main">
-        <Box>{props.children}</Box>
-        <Box></Box>
-    </div>
+  const classes = useStyles()
+
+  return (
+    <Box className={classes.boxRoot}>
+      <Box>{props.children}</Box>
+    </Box>
+  )
 }
 
-export default Main;
+export default Main

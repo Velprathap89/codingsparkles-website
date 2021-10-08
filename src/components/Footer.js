@@ -1,32 +1,86 @@
-import { Box } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import React from 'react';
+import React from "react"
+import { Grid, Typography, Box } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import { Link } from "gatsby"
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex",
+    alignItems: "center",
+  },
+  infoRoot: {
+    justifyContent: "flex-start",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+    },
+  },
+  pageRoot: {
+    justifyContent: "flex-end",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+    },
+  },
+  activeLink: {
+    color: "green",
+  },
+  copyRight: {
+    textTransform: "capitalize",
+  },
+}))
 
 const Footer = () => {
-    return (
-        <div className='cs-footer'>
-            <Box>
-                <div className="copyright-info">CodingSparkles © {new Date().getFullYear()}. All rights reserved.</div>
-                <div className="about-page">About</div>
-                <div className="contact-page">Contact</div>
-                <div className="privacy-page">Privacy Policy</div>
-            </Box>
-            <Box>
-                <Link to={"www.facebook.com"} target="_blank">
-                    <FacebookIcon />
-                </Link>
-                <Link to={"www.instagram.com"} target="_blank">
-                    <InstagramIcon />
-                </Link>
-                <Link to={"www.twitter.com"} target="_blank">
-                    <TwitterIcon />
-                </Link>
-            </Box>
-        </div>
-    )
+  const classes = useStyles()
+
+  return (
+    <Box className="cs-footer">
+      <Grid container spacing={3}>
+        <Grid
+          className={`${classes.root} ${classes.infoRoot}`}
+          item
+          xs={12}
+          sm={6}
+          md={6}
+        >
+          <Typography variant="overline" className={classes.copyRight}>
+            CodingSparkles © {new Date().getFullYear()}. All rights reserved.
+          </Typography>
+        </Grid>
+        <Grid
+          className={`${classes.root} ${classes.pageRoot}`}
+          item
+          xs={12}
+          sm={6}
+          md={6}
+        >
+          <Box className="page-menu-container">
+            <Link
+              to="/"
+              rel="Home"
+              activeStyle={{ color: "#1976d2" }}
+            >
+              <Typography variant="button" className="home-page">
+                Home
+              </Typography>
+            </Link>
+            <Link to="/About/" rel="About" activeStyle={{ color: "#1976d2" }}>
+              <Typography variant="button" className="about-page">
+                About
+              </Typography>
+            </Link>
+            <Link
+              to="/Contact/"
+              rel="Contact"
+              activeStyle={{ color: "#1976d2" }}
+            >
+              <Typography variant="button" className="contact-page">
+                Contact
+              </Typography>
+            </Link>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  )
 }
 
-export default Footer;
+export default Footer

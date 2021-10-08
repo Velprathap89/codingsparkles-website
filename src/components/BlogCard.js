@@ -1,55 +1,99 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Img from 'gatsby-image';
+import React from "react"
+import { Link } from "gatsby"
+import { makeStyles } from "@material-ui/core/styles"
+import Img from "gatsby-image"
+import {
+  Grid,
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Box,
+} from "@material-ui/core"
 
 const useStyles = makeStyles({
-    root: {
-        maxWidth: 345,
+  boxRoot: {
+    minHeight: "72vh",
+  },
+  cardRoot: {
+    height: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column"
+  },
+  actionRoot: {
+    justifyContent: "center",
+  },
+  readLink: {
+    textDecoration: "none",
+    height: "20px",
+
+    "& :hover": {
+      borderBottom: "1px solid #1976d2",
     },
-    media: {
-        height: 140,
-    },
-});
+  },
+  readLinkText: {
+    color: "#1976d2",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  cardContentRoot: {
+    padding: 0,
+  },
+  cardContentText: {
+    padding: "16px",
+  },
+})
 
 const BlogCard = ({ posts }) => {
-    const classes = useStyles();
+  const classes = useStyles()
 
-    return (
-        <div className='card-container'>
-            {
-                posts.map((post, index) => {
-                    const title = post.frontmatter.title || post.fields.slug;
-                    const imgSrc = (post.frontmatter.thumb && post.frontmatter.thumb.childImageSharp.fluid) || null;
-                    const isLargeCard = index % 3 === 0;
-                    const className = `post-card-container ${isLargeCard ? "large-card" : ""}`;
-                    return <div className={className}><Card className={classes.root} key={post.fields.slug}>
-                        <CardActionArea>
-                            <Img fluid={imgSrc} />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    {title}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {post.frontmatter.description || post.excerpt}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Link to={post.fields.slug} itemProp="url">
-                                Read More
-                            </Link>
-                        </CardActions>
-                    </Card></div>
-                })
-            }
-        </div>
-    );
+  return (
+    <Box className={classes.boxRoot}>
+      <Grid container spacing={3}>
+        {posts &&
+          posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+            const imgSrc =
+              (post.frontmatter.thumb &&
+                post.frontmatter.thumb.childImageSharp.fluid) ||
+              null
+
+            return (
+              <Grid key={post.fields.slug} item xs={12} sm={6} md={4}>
+                <Card className={classes.cardRoot} key={post.fields.slug}>
+                  <CardContent className={classes.cardContentRoot}>
+                    <Img fluid={imgSrc} />
+                    <Box className={classes.cardContentText}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {title}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {post.frontmatter.description || post.excerpt}
+                      </Typography>
+                    </Box>
+                  </CardContent>
+                  <CardActions className={classes.actionRoot}>
+                    <Link
+                      className={classes.readLink}
+                      to={post.fields.slug}
+                      itemProp="url"
+                    >
+                      <Box className={classes.readLinkText}>Read More </Box>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+            )
+          })}
+      </Grid>
+    </Box>
+  )
 }
 
-export default BlogCard;
+export default BlogCard

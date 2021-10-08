@@ -1,0 +1,50 @@
+@import '../variable.scss';
+
+.page-link {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+}
+
+.link-container {
+    text-decoration: none;
+    margin: .5rem;
+
+    .page-number {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.87);
+        border: 1px solid rgba(0, 0, 0, 0.23);
+
+        &.active-page {
+            color: $btnColor;
+            border: 1px solid rgba(25, 118, 210, 0.5);
+            background-color: rgba(25, 118, 210, 0.12);
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 1;
+        color: #ccc;
+    }
+
+    &:not(.disabled) {
+        .next-page,
+        .prev-page {
+            svg {
+                fill: $btnColor;
+            }
+        }
+    }    
+}

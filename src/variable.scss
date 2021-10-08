@@ -1,0 +1,10 @@
+$bgColor: #FFFFFF;
+$fontColor: #333333;
+$btnColor: #1976d2;
+$footerPadding: 1rem;
+
+:export {
+    bgColor: $bgColor;
+    fontColor: $fontColor;
+    btnColor: $btnColor;
+}
