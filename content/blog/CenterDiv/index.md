@@ -1,5 +1,5 @@
 ---
-title: Two simple way to centering Div
+title: Two Simple Ways to Centering an Element (Div)
 date: "2021-10-04T03:00:00.284Z"
 description: In this article, I'm going to share two easy ways to center the element using CSS. Let's go through the "Easiest ways to center a Div element using CSS"...
 thumb: centerelement.jpg
@@ -7,7 +7,7 @@ tags: ["CSS"]
 ---
 <div class="photo-details">Photo by <a href="https://unsplash.com/@louishansel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Louis Hansel</a> on <a href="https://unsplash.com/s/photos/center?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
   
-In this article, I'm going to share two easy ways to center the element using CSS. Let's go through the "Easiest ways to center a Div element using CSS".
+In this article, I'm going to share two easy ways to center the element using CSS. Let's go through the ways to center a Div element using CSS.
 
 HTML Element
 

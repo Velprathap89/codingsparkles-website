@@ -8,7 +8,7 @@ import {
   Grid,
   Box,
 } from "@material-ui/core"
-import GitHubIcon from "@material-ui/icons/GitHub"
+import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import HomeIcon from "@material-ui/icons/Home"
@@ -43,9 +43,9 @@ const useStyles = makeStyles(theme => ({
       fill: "#1976d2",
     },
   },
-  github: {
+  facebook: {
     "& :hover": {
-      fill: "#4078c0",
+      fill: "#1877F2",
     },
   },
   instagram: {
@@ -91,20 +91,20 @@ const Header = ({ title }) => {
                     <HomeIcon />
                   </IconButton>
                   <IconButton
-                    href="https://www.github.com/codingsparkles"
-                    aria-label="Go to My Github"
-                    target="_blank"
-                    className={classes.github}
-                  >
-                    <GitHubIcon />
-                  </IconButton>
-                  <IconButton
                     href="https://www.instagram.com/codingsparkles"
                     aria-label="Go to My Instagram"
                     target="_blank"
                     className={classes.instagram}
                   >
                     <InstagramIcon />
+                  </IconButton>
+                  <IconButton
+                    href="https://www.facebook.com/codingsparkles"
+                    aria-label="Go to My Facebook"
+                    target="_blank"
+                    className={classes.facebook}
+                  >
+                    <FacebookIcon />
                   </IconButton>
                   <IconButton
                     href="https://www.twitter.com/codingsparkles"

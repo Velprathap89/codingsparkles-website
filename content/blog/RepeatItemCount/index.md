@@ -1,14 +1,14 @@
 ---
 title: Repeated Item Count in the given Array
 date: "2021-10-06T04:00:00.284Z"
-description: In this article, we are going to learn about the method to calculate the repeated word count in the given array...
+description: In this article, i am going to share information about how to calculate the repeated word count in the given array...
 thumb: RepeatCount.jpg
 tags: ["JavaScript"]
 ---
 
 <div class="photo-details">Photo by <a href="https://unsplash.com/@ryanquintal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryan Quintal</a> on <a href="https://unsplash.com/collections/8474844/repeat-%2F-repeat-%2F-repeat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 
-In this article, we are going to learn about the method to calculate the repeated words count in the given array.
+In this article, i am going to share information about how to calculate the repeated word count in the given array.
 
 Repetition count calculation method.
 
@@ -53,4 +53,4 @@ Output
 {10: 2, 20: 3, 30: 2}
 ```
 
-That's it for this post friends. I have tried to in this way, if you guys have any other idea share with me will attempt to learn together.
+That's it for this post friends. I have tried to find the repeated word count in this way if you guys have any other idea share with me will attempt to learn together.

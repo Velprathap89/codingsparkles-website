@@ -1,13 +1,13 @@
 ---
 title: Five Possible Ways of Removing Duplicate Item from Array
 date: "2021-10-06T02:00:00.284Z"
-description: In this article, we are going to learn about the five possible ways of removing duplicate item from an Array...
+description: Would you like to know how to remove duplicate items from an Array? Let's explore the possible pathways....
 thumb: Duplicate.jpg
 tags: ["JavaScript"]
 ---
 <div class="photo-details">Photo by <a href="https://unsplash.com/@dear_jondog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Daniels</a> on <a href="https://unsplash.com/@skyestudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 
-In this article, we are going to learn about the five possible ways of removing duplicate item from an Array.
+Would you like to know how to remove duplicate items from an Array? Let's explore the possible pathways.
 
 Input Array
 

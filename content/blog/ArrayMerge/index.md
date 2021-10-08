@@ -1,5 +1,5 @@
 ---
-title: Five Possible Methods for Merging Two arrays (array of objects)
+title: Five Possible Methods for Merging Two arrays (Array of Objects)
 date: "2021-10-04T10:00:00.284Z"
 description: In this article, we will learn about the five possible ways of overcoming the problem of joining two tables...
 thumb: MergeArrays.jpg
