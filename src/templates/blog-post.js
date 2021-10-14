@@ -20,6 +20,9 @@ const useStyles = makeStyles({
   root: {
     padding: "1rem",
   },
+  typeContainer: {
+    margin: "0 1rem",
+  },
   typoRoot: {
     display: "flex",
     justifyContent: "center",
@@ -134,18 +137,29 @@ const BlogPostTemplate = props => {
                       />
                     ))}
                   </Box>
-                  <Typography className={classes.typoRoot} variant="h6">
-                    {readingTime}
-                  </Typography>
-                  <Typography className={classes.typoRoot} variant="h6">
-                    {post.frontmatter.date}
-                  </Typography>
+                  <Box className={classes.typeContainer}>
+                    <Typography
+                      className={classes.typoRoot}
+                      variant="subtitle1"
+                    >
+                      {readingTime}
+                    </Typography>
+                  </Box>
+                  <Box className={classes.typeContainer}>
+                    <Typography
+                      className={classes.typoRoot}
+                      variant="subtitle1"
+                    >
+                      {post.frontmatter.date}
+                    </Typography>
+                  </Box>
                 </Box>
               </header>
               <Paper>
                 <Img fluid={imgSrc} />
               </Paper>
               <div
+                className="article-content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
                 itemProp="articleBody"
               />
