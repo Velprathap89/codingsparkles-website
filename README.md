@@ -13,9 +13,9 @@ Fully customizable blog template with Gatsby JS with Material UI components.
   - View the post by selected tag
   - Tags are differentiated with colors
 * Pagination
- - Simple and beautiful pagination with page numbers and previous, next page buttons.
+  - Simple and beautiful pagination with page numbers and previous, next page buttons.
 * Social Share
- - Social sharing buttons for each post to share the content.
+  - Social sharing buttons for each post to share the content.
 * Responsive layout
   - Showing the content properly in both desktop and mobile modes.
 ## 🚀 Quick start
