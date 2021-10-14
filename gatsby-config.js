@@ -3,10 +3,10 @@ module.exports = {
     title: `CodingSparkles`,
     author: {
       name: `Velmurugan Sivaprakasam`,
-      summary: `who lives and works in Chennai building useful things.`,
+      summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
     description: `Blog website to share the knowledge.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://www.codingsparkles.com/`,
     social: {
       twitter: `velmurugan`,
     },
@@ -73,7 +73,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-JSEJL3XQ3S", 
+          "G-8Y7RZ2B3S7", 
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
