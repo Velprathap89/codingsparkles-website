@@ -15,10 +15,14 @@ import Img from "gatsby-image"
 import ArrowBack from "@material-ui/icons/ArrowBack"
 import ArrowForward from "@material-ui/icons/ArrowForward"
 import SocialShare from "../components/SocialShare"
+import Comments from "../components/Comments"
 
 const useStyles = makeStyles({
   root: {
     padding: "1rem",
+  },
+  typeContainer: {
+    margin: "0 1rem",
   },
   typoRoot: {
     display: "flex",
@@ -134,24 +138,41 @@ const BlogPostTemplate = props => {
                       />
                     ))}
                   </Box>
-                  <Typography className={classes.typoRoot} variant="h6">
-                    {readingTime}
-                  </Typography>
-                  <Typography className={classes.typoRoot} variant="h6">
-                    {post.frontmatter.date}
-                  </Typography>
+                  <Box className={classes.typeContainer}>
+                    <Typography
+                      className={classes.typoRoot}
+                      variant="subtitle1"
+                    >
+                      {readingTime}
+                    </Typography>
+                  </Box>
+                  <Box className={classes.typeContainer}>
+                    <Typography
+                      className={classes.typoRoot}
+                      variant="subtitle1"
+                    >
+                      {post.frontmatter.date}
+                    </Typography>
+                  </Box>
                 </Box>
               </header>
               <Paper>
                 <Img fluid={imgSrc} />
               </Paper>
-              <div
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                itemProp="articleBody"
-              />
+              <Box>
+                <Typography
+                  paragraph={true}
+                  className="article-content"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  itemProp="articleBody"
+                />
+              </Box>
             </article>
             <SocialShare url={url} post={post} tags={tags} />
           </Paper>
+          <Box>
+            <Comments post={post} />
+          </Box>
           <Grid container className={classes.footerGrid}>
             <Grid item xs={6} sm={6} md={6}>
               {previous && (

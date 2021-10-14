@@ -159,5 +159,36 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-gitalk`,
+      options: {
+        config: {
+          clientID: '5ef7efff5812bb5e0b30',
+          clientSecret : '343a69189904efd7f0cf129517a0d4132e404107',
+          repo: 'codingsparkles-website',
+          owner: 'Velprathap89',
+          admin: ["Velprathap89"],
+          pagerDirection: "last",
+          createIssueManually: true,
+          distractionFreeMode: true,
+          enableHotKey: true,
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto Mono`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Roboto`,
+            subsets: [`latin`]
+          },
+        ],
+      },
+    }
   ],
 }

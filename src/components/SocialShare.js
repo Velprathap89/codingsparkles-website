@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, makeStyles } from "@material-ui/core"
+import { Box, makeStyles, Typography } from "@material-ui/core"
 import {
   FacebookShareButton,
   InstapaperShareButton,
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     }
   },
   iconPadding: {
-    padding: "0 .5rem",
+    padding: ".5rem",
   },
   linkedIn: {
     fill: "#0A66C2",
@@ -43,6 +43,9 @@ const SocialShare = ({ url, post, tags }) => {
   const { title, description } = post.frontmatter
   return (
     <Box className={classes.boxRoot}>
+      <Typography variant='h6'>
+        Share:
+      </Typography>
       <LinkedinShareButton
         url={url}
         title={title}
