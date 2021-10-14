@@ -53,11 +53,11 @@ module.exports = {
             },
           },
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
-              height: 400
-            }
+              height: 400,
+            },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -72,9 +72,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-8Y7RZ2B3S7", 
-        ],
+        trackingIds: ["G-8Y7RZ2B3S7"],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
@@ -163,17 +161,23 @@ module.exports = {
       resolve: `gatsby-plugin-gitalk`,
       options: {
         config: {
-          clientID: '5ef7efff5812bb5e0b30',
-          clientSecret : '343a69189904efd7f0cf129517a0d4132e404107',
-          repo: 'codingsparkles-website',
-          owner: 'Velprathap89',
+          clientID: "5ef7efff5812bb5e0b30",
+          clientSecret: "343a69189904efd7f0cf129517a0d4132e404107",
+          repo: "codingsparkles-website",
+          owner: "Velprathap89",
           admin: ["Velprathap89"],
           pagerDirection: "last",
           createIssueManually: true,
           distractionFreeMode: true,
           enableHotKey: true,
-        }
-      }
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `https-codingsparkles-dev-netlify-app`,
+      },
     },
   ],
 }

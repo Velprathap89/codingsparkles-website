@@ -13,6 +13,7 @@
     "@weknow/gatsby-remark-codepen": "^0.1.0",
     "gatsby": "^3.9.0",
     "gatsby-image": "^3.9.0",
+    "gatsby-plugin-disqus": "^1.2.3",
     "gatsby-plugin-feed": "^3.9.0",
     "gatsby-plugin-gatsby-cloud": "^2.9.0",
     "gatsby-plugin-gitalk": "^1.2.2",

@@ -160,8 +160,7 @@ const BlogPostTemplate = props => {
                 <Img fluid={imgSrc} />
               </Paper>
               <Box>
-                <Typography
-                  paragraph={true}
+                <div
                   className="article-content"
                   dangerouslySetInnerHTML={{ __html: post.html }}
                   itemProp="articleBody"
@@ -171,7 +170,7 @@ const BlogPostTemplate = props => {
             <SocialShare url={url} post={post} tags={tags} />
           </Paper>
           <Box>
-            <Comments post={post} />
+            <Comments post={post} url={url} />
           </Box>
           <Grid container className={classes.footerGrid}>
             <Grid item xs={6} sm={6} md={6}>
