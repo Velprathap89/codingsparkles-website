@@ -2,14 +2,16 @@ import React from "react"
 import { Box, makeStyles, Typography } from "@material-ui/core"
 import {
   FacebookShareButton,
-  InstapaperShareButton,
   LinkedinShareButton,
+  RedditShareButton,
+  TelegramShareButton,
   TwitterShareButton,
 } from "react-share"
 import TwitterIcon from "@material-ui/icons/Twitter"
-import InstagramIcon from "@material-ui/icons/Instagram"
+import RedditIcon from "@material-ui/icons/Reddit"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import TelegramIcon from "@material-ui/icons/Telegram"
 
 const useStyles = makeStyles({
   boxRoot: {
@@ -17,9 +19,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
 
-    '& button': {
-      height: "40px"
-    }
+    "& button": {
+      height: "40px",
+    },
   },
   iconPadding: {
     padding: ".5rem",
@@ -27,15 +29,18 @@ const useStyles = makeStyles({
   linkedIn: {
     fill: "#0A66C2",
   },
-  instagram: {
-    fill: "#E4405F",
+  reddit: {
+    fill: "#FF5700",
   },
   facebook: {
-    fill: "#1877F2"
+    fill: "#1877F2",
   },
   twitter: {
-    fill: "#1DA1F2"
-  }
+    fill: "#1DA1F2",
+  },
+  telegran: {
+    fill: "#0088cc",
+  },
 })
 
 const SocialShare = ({ url, post, tags }) => {
@@ -43,9 +48,7 @@ const SocialShare = ({ url, post, tags }) => {
   const { title, description } = post.frontmatter
   return (
     <Box className={classes.boxRoot}>
-      <Typography variant='h6'>
-        Share:
-      </Typography>
+      <Typography variant="subtitle1">Share:</Typography>
       <LinkedinShareButton
         url={url}
         title={title}
@@ -56,19 +59,22 @@ const SocialShare = ({ url, post, tags }) => {
           className={`${classes.iconPadding} ${classes.linkedIn}`}
         />
       </LinkedinShareButton>
-      <InstapaperShareButton url={url} title={title} description={description}>
-        <InstagramIcon
-          className={`${classes.iconPadding} ${classes.instagram}`}
-        />
-      </InstapaperShareButton>
+      <TwitterShareButton url={url} title={title} hashtags={tags}>
+        <TwitterIcon className={`${classes.iconPadding} ${classes.twitter}`} />
+      </TwitterShareButton>
       <FacebookShareButton url={url} quote={title} hashtag={tags.toString()}>
         <FacebookIcon
           className={`${classes.iconPadding} ${classes.facebook}`}
         />
       </FacebookShareButton>
-      <TwitterShareButton url={url} title={title} hashtags={tags}>
-        <TwitterIcon className={`${classes.iconPadding} ${classes.twitter}`} />
-      </TwitterShareButton>
+      <RedditShareButton url={url} title={title} description={description}>
+        <RedditIcon className={`${classes.iconPadding} ${classes.reddit}`} />
+      </RedditShareButton>
+      <TelegramShareButton url={url} title={title}>
+        <TelegramIcon
+          className={`${classes.iconPadding} ${classes.telegran}`}
+        />
+      </TelegramShareButton>
     </Box>
   )
 }

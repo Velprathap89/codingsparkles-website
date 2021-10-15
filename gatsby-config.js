@@ -5,7 +5,7 @@ module.exports = {
       name: `Velmurugan Sivaprakasam`,
       summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
-    description: `Blog website to share the knowledge.`,
+    description: `Blog website to share that which is known and to learn that which is unknown.`,
     siteUrl: `https://www.codingsparkles.com/`,
     social: {
       twitter: `velmurugan`,
@@ -158,26 +158,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: `gatsby-plugin-gitalk`,
-      options: {
-        config: {
-          clientID: "5ef7efff5812bb5e0b30",
-          clientSecret: "343a69189904efd7f0cf129517a0d4132e404107",
-          repo: "codingsparkles-website",
-          owner: "Velprathap89",
-          admin: ["Velprathap89"],
-          pagerDirection: "last",
-          createIssueManually: true,
-          distractionFreeMode: true,
-          enableHotKey: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `https-codingsparkles-dev-netlify-app`,
-      },
+      resolve: `gatsby-plugin-social9-comment`,
     },
   ],
 }
