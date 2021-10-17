@@ -157,8 +157,5 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-plugin-social9-comment`,
-    },
   ],
 }

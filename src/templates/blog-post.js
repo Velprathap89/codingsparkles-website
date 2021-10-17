@@ -15,7 +15,6 @@ import Img from "gatsby-image"
 import ArrowBack from "@material-ui/icons/ArrowBack"
 import ArrowForward from "@material-ui/icons/ArrowForward"
 import SocialShare from "../components/SocialShare"
-import Comments from "../components/Comments"
 
 const useStyles = makeStyles({
   root: {
@@ -169,9 +168,6 @@ const BlogPostTemplate = props => {
             </article>
             <SocialShare url={url} post={post} tags={tags} />
           </Paper>
-          <Box>
-            <Comments post={post} url={url} />
-          </Box>
           <Grid container className={classes.footerGrid}>
             <Grid item xs={6} sm={6} md={6}>
               {previous && (
