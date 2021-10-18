@@ -11,7 +11,7 @@ tags: ["CSS"]
   
 In this article, I'm going to share the steps to create the Sun Set ([CSS battle challenge](https://cssbattle.dev/play/62)) using pure CSS.
 
-## Step 1: Creating the HTML elements
+## Step 1: Create the HTML elements
 
 * Create the required HTML elements as mentioned in the following code snippets.
 
@@ -40,7 +40,7 @@ body {
 }
 ```
 
-* Background element (Behind Sunset and Hills)
+* To create the Sky (Behind Sunset and Hills)
 
 ```css
 .parent {

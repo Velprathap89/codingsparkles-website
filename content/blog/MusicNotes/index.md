@@ -9,9 +9,11 @@ tags: ["CSS"]
   
 In this article, I'm going to share the steps to create the Music Notes ([CSS battle challenge](https://cssbattle.dev/play/77)) using pure CSS.
 
-## Step 1: HTML Elements to create Music Notes
+## Step 1: Create the HTML elements
 
 * Create the required HTML elements as mentioned in the following code snippets.
+
+HTML Element Structure
 
 ```html
 <div class="parent">
