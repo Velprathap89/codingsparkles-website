@@ -5,7 +5,7 @@ module.exports = {
       name: `Velmurugan Sivaprakasam`,
       summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
-    description: `Blog website to share the knowledge.`,
+    description: `Blog website to share that which is known and to learn that which is unknown.`,
     siteUrl: `https://www.codingsparkles.com/`,
     social: {
       twitter: `velmurugan`,
@@ -53,11 +53,11 @@ module.exports = {
             },
           },
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
-              height: 400
-            }
+              height: 400,
+            },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -72,9 +72,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-8Y7RZ2B3S7", 
-        ],
+        trackingIds: ["G-8Y7RZ2B3S7"],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {

@@ -158,11 +158,13 @@ const BlogPostTemplate = props => {
               <Paper>
                 <Img fluid={imgSrc} />
               </Paper>
-              <div
-                className="article-content"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                itemProp="articleBody"
-              />
+              <Box>
+                <div
+                  className="article-content"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  itemProp="articleBody"
+                />
+              </Box>
             </article>
             <SocialShare url={url} post={post} tags={tags} />
           </Paper>
