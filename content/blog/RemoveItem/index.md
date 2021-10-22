@@ -72,9 +72,9 @@ Output
 1: {name: "The Road to React by Robin Wieruch", author: "Robin Wieruch"}
 2: {name: "Learn React Hooks by Daniel Bugl", author: "Daniel Bugl"}
 ```
-
-> <b>Note:</b> By using the <b>splice()</b> and <b>slice()</b> method able to remove n number of items from an array by passing the corresponding (index) value as input.
-
+---
+> **_Note:_** By using the <b>splice()</b> and <b>slice()</b> method able to remove n number of items from an array by passing the corresponding (index) value as input.
+---
 ## 3) Using shift
 
 * The [<b>shift()</b>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method removes the first item of an array. Removed item is the return value of this method. It changes the original array.
@@ -94,5 +94,6 @@ Output
 1: {name: "The Road to React by Robin Wieruch", author: "Robin Wieruch"}
 2: {name: "Learn React Hooks by Daniel Bugl", author: "Daniel Bugl"}
 ```
-
-> Note: By using the <b>shift()</b> method can remove only one item (i.e. first item) from an array at a time.
+---
+> **_Note:_** By using the <b>shift()</b> method can remove only one item (i.e. first item) from an array at a time.
+---

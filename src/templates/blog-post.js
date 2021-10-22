@@ -16,7 +16,7 @@ import ArrowBack from "@material-ui/icons/ArrowBack"
 import ArrowForward from "@material-ui/icons/ArrowForward"
 import SocialShare from "../components/SocialShare"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: "1rem",
   },
@@ -55,6 +55,11 @@ const useStyles = makeStyles({
   },
   nextPostRoot: {
     borderLeft: "2px solid #ccc",
+
+    [theme.breakpoints.down("sm")]: {
+      borderLeft: "none",
+      marginTop: "10px",
+    },
   },
   nextPost: {
     justifyContent: "flex-end",
@@ -75,7 +80,7 @@ const useStyles = makeStyles({
   title: {
     color: "#333333",
   },
-})
+}))
 
 const BlogPostTemplate = props => {
   const classes = useStyles()
@@ -169,7 +174,7 @@ const BlogPostTemplate = props => {
             <SocialShare url={url} post={post} tags={tags} />
           </Paper>
           <Grid container className={classes.footerGrid}>
-            <Grid item xs={6} sm={6} md={6}>
+            <Grid item xs={12} sm={6} md={6}>
               {previous && (
                 <Box className={classes.btnRoot}>
                   <Box className={classes.footerIconContainer}>
@@ -198,7 +203,7 @@ const BlogPostTemplate = props => {
             <Grid
               className={`${previous ? classes.nextPostRoot : ""}`}
               item
-              xs={6}
+              xs={12}
               sm={6}
               md={6}
             >

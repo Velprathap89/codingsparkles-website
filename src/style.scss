@@ -9,6 +9,29 @@ body {
         height: 100%;
     }
 
+    .CookieConsent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        div.first-child {
+            flex: auto !important;
+        }
+
+        .cookie-header {
+            margin-left: 5px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #rcc-confirm-button {
+            background-color: darkcyan !important;
+            border-radius: 5px !important;
+            color: white !important;
+        }
+    }
+
     .blog-post {
         .photo-details {
             text-align: center;
@@ -51,6 +74,7 @@ body {
         .MuiGrid-root {
             .page-menu-container {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 padding: $footerPadding;
@@ -63,7 +87,9 @@ body {
 
                 .about-page,
                 .contact-page,
-                .home-page {
+                .home-page,
+                .privacy-page,
+                .terms-page {
                     cursor: pointer;
 
                     &:hover {
@@ -71,7 +97,8 @@ body {
                     }
                 }
 
-                .about-page {
+                .about-page,
+                .terms-page {
                     border-left: 2px solid $fontColor;
                     border-right: 2px solid $fontColor;
                     padding: 0 $footerPadding;
