@@ -10,12 +10,12 @@ body {
     }
 
     .CookieConsent {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
         flex-direction: column;
 
-        div.first-child {
+        div:first-child {
             flex: auto !important;
         }
 

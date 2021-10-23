@@ -71,4 +71,4 @@ https://codepen.io/codingsparkles/pen/YzGarRJ
 
 That’s all about this blog post friends. Share your ideas on this topic.
 
-I hope this will be useful for you, do you think something very similar, simply share this with your friends!
+I hope this will be useful for you, do you think something is very similar, simply share this with your friends!
