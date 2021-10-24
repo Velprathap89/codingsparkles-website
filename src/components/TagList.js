@@ -48,7 +48,7 @@ const TagList = () => {
     if (tag === "CSS") {
       return "csstBg"
     }
-    if (tag === "Sass") {
+    if (["Sass", "SCSS"].includes(tag)) {
       return "sassBg"
     }
     if (tag === "Angular") {

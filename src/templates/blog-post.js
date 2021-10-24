@@ -106,7 +106,7 @@ const BlogPostTemplate = props => {
     if (tag === "CSS") {
       return { backgroundColor: "#FFEFD8" }
     }
-    if (tag === "Sass") {
+    if (["Sass", "SCSS"].includes(tag)) {
       return { backgroundColor: "#FFDDE4" }
     }
     if (tag === "Angular") {
