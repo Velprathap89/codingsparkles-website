@@ -26,6 +26,15 @@ const useStyles = makeStyles(theme => ({
   copyRight: {
     textTransform: "capitalize",
   },
+  termsPage: {
+    [theme.breakpoints.down("sm")]: {
+      borderLeft: "none !important",
+    },
+    [theme.breakpoints.down("xs")]: {
+      borderLeft: "none !important",
+      borderRight: "none !important",
+    },
+  },
 }))
 
 const Footer = () => {
@@ -53,11 +62,7 @@ const Footer = () => {
           md={6}
         >
           <Box className="page-menu-container">
-            <Link
-              to="/"
-              rel="Home"
-              activeStyle={{ color: "#1976d2" }}
-            >
+            <Link to="/" rel="Home" activeStyle={{ color: "#1976d2" }}>
               <Typography variant="button" className="home-page">
                 Home
               </Typography>
@@ -74,6 +79,24 @@ const Footer = () => {
             >
               <Typography variant="button" className="contact-page">
                 Contact
+              </Typography>
+            </Link>
+            <Link
+              to="/TermsConditions/"
+              rel="TermsConditions"
+              activeStyle={{ color: "#1976d2" }}
+            >
+              <Typography variant="button" className={`terms-page ${classes.termsPage}`}>
+                Terms And Conditions
+              </Typography>
+            </Link>
+            <Link
+              to="/PrivacyPolicy/"
+              rel="PrivacyPolicy"
+              activeStyle={{ color: "#1976d2" }}
+            >
+              <Typography variant="button" className="privacy-page">
+                Privacy Policy
               </Typography>
             </Link>
           </Box>

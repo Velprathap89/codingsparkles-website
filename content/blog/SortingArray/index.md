@@ -8,7 +8,7 @@ tags: ["JavaScript"]
 
 <div class="photo-details">Photo by <a href="https://unsplash.com/@uxindo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">UX Indonesia</a> on <a href="https://unsplash.com/s/photos/sorting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 
-In this article we can learn three possible ways to reverse a string in JavaScript.
+In this article we can learn the sorting an array of objects based on the particular property value.
 
 ### Input Array
 

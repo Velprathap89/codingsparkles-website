@@ -1,13 +1,13 @@
 ---
 title: Four Possible Ways of Finding an object (Array of Objects)
 date: "2021-10-05T09:00:00.284Z"
-description: Array of objects plays an important role in real-time web development. Particularly while working with the JavaScript-based application, it is the most important component...
+description: An Array of objects plays an important role in real-time web development. Particularly while working with the JavaScript-based application, it is the most important component...
 thumb: FindObject.jpg
 tags: ["JavaScript"]
 ---
 <div class="photo-details">Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/find?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 
-Array of objects plays an important role in real-time web development. Particularly while working with the JavaScript-based application, it is the most important component. So we can get a situation to find the particular object/element from the array of objects/elements. In this article, we're going to explore five possible ways to find the object/element from the JavaScript array. Let us begin and look at the methods.
+An Array of objects plays an important role in real-time web development. Particularly while working with the JavaScript-based application, it is the most important component. So we can get a situation to find the particular object/element from the array of objects/elements. In this article, we're going to explore five possible ways to find the object/element from the JavaScript array. Let us begin and look at the methods.
 
 Input Array
 

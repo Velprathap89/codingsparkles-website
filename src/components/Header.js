@@ -12,6 +12,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import HomeIcon from "@material-ui/icons/Home"
+import Search from "./Search"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,8 +73,8 @@ const Header = ({ title }) => {
                 className={`${classes.root} ${classes.infoRoot}`}
                 item
                 xs={12}
-                sm={6}
-                md={6}
+                sm={5}
+                md={8}
               >
                 <Typography className={classes.title} variant="h6" noWrap>
                   {title}
@@ -83,11 +84,24 @@ const Header = ({ title }) => {
                 className={`${classes.root} ${classes.pageRoot}`}
                 item
                 xs={12}
-                sm={6}
-                md={6}
+                sm={4}
+                md={2}
+              >
+                <Search />
+              </Grid>
+              <Grid
+                className={`${classes.root} ${classes.pageRoot}`}
+                item
+                xs={12}
+                sm={3}
+                md={2}
               >
                 <Box>
-                  <IconButton className={classes.home} href="/" aria-label="Go to My Home">
+                  <IconButton
+                    className={classes.home}
+                    href="/"
+                    aria-label="Go to My Home"
+                  >
                     <HomeIcon />
                   </IconButton>
                   <IconButton
