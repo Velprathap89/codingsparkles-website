@@ -1,5 +1,5 @@
 ---
-title: Responsive Pokemon App using Material UI in React JS
+title: Responsive Pokemon App uses Material UI components in React JS
 date: "2021-10-31T03:00:00.284Z"
 description: In this article, we are going to learn about creating the responsive Pokemon app using Material UI components in React JS...
 thumb: Pokemon.jpg
@@ -11,10 +11,10 @@ In this article, we are going to learn about creating the responsive Pokemon app
 
 This app contains the following features.
 
-* List display - To display the Pokeman basic details.
-* Dialog - To display the Pokemon in depth details.
+* Grid Display - To display the Pokeman basic details.
+* Dialog - To display more details about the Pokemon.
 * Prev/Next Buttons - To navigate between pages and display the active page Pokemon details.
-* Responsive - Displaying the basic and depth details responsively.
+* Responsive - Displaying the Pokemon details responsively.
 
 ## Step 1: Create the react application
 
@@ -42,9 +42,9 @@ In this demo application, we are going to use the *Material UI component and ico
 npm i @material-ui/core @material-ui/icons @material-ui/lab
 ```
 
-> **Note:** @material-ui/core package contains the [components](https://v4.mui.com/) and @material-ui/icons package contains the [icons](https://v4.mui.com/components/material-icons/#material-icons).
+> **Note:** @material-ui/core, @material-ui/lab package contains the [components](https://v4.mui.com/) and @material-ui/icons package contains the [icons](https://v4.mui.com/components/material-icons/#material-icons).
 
-Also, we need to install the **axios** library by using the following code. We are going to use this axios post method to trigger the API request.
+Also, we need to install the **axios** library by using the following command. Since, we are going to use this axios (post method) to trigger the API request.
 
 ```js
 npm i axios
@@ -52,7 +52,7 @@ npm i axios
 
 ## Step 3: Create the required components and styles
 
-* Modify the *App.js* page by adding the required component *Button* for navigating different pages, *Card* for basic detail display and "Dialog* for more details display.
+* Modify the *App.js* page by adding the required component *Button* for navigating different pages, *Paper* for basic detail display and "Dialog* for more details display.
 
 ###  Initialize the required state variables
 
@@ -75,15 +75,13 @@ npm i axios
     }
 ```
 
-* *classes* - Class name instance to apply the styles to Material UI components
+* *showDialog* - Decides to show/hide the dialog.
 
-* *showDialog* - Decides to show/hide the dialog
+* *tabIndex* - Maintains the active tab index value of the Tab component.
 
-* *tabIndex* - Maintains the active tab index value of the Tab component
+* *selectedPokemon* - Maintains the selected Pokemon details while displaying its details in dialog.
 
-* *selectedPokemon* - Maintains the selected Pokemon details while displaying the its details in dialog
-
-* *pokemonData* - Maintains the active page Pokemon data
+* *pokemonData* - Maintains the active page Pokemon data.
 
 * *requestUrl* - Maintains the active page request url as well as previous and next page request url.
 
@@ -201,7 +199,7 @@ npm i axios
 
 * This TabPanel component will be displayed within the dialog.
 
-* There are two tabs displaying in the dialog and first tab will show the details of the Pokemon state details and the second tab will be displaying its types.
+* There are two tabs displaying in the dialog and first tab will show the details of the Pokemon stat details and the second tab will be displaying its types.
 
 ### Title and Navigation Button components
 
@@ -365,7 +363,7 @@ npm i axios
 
 * *Chip* component is used to display the name of the Pokemon and its ability.
 
-* *LinearProgress* component is used to display the progress of the Pokemon stats.
+* *LinearProgress* component is used to display the details of the Pokemon stats.
 
 ### Customized styles
 
@@ -423,7 +421,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 ```
-* Here we are adding the above styles to position and making the Pokemon list display and its details display more attractive.
+* Here we are adding the above styles to position and making the Pokemon list display and its details display.
 
 A working example of the above code snippet can be found in the following codesandbox location.
 

@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     padding: "1rem",
 
     [theme.breakpoints.down("sm")]: {
-      marginTop: "120px",
+      marginTop: "170px",
     },
   },
 }))
