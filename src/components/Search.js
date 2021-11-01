@@ -16,18 +16,18 @@ const useStyles = makeStyles(theme => ({
   inputRoot: {
     color: "purple",
     "&:hover .MuiOutlinedInput-notchedOutline": {
-      borderColor: "grey"
+      borderColor: "grey",
     },
     "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "lightgrey"
-    }
-  }
+      borderColor: "lightgrey",
+    },
+  },
 }))
 
 const SearchComponent = data => {
   const defaultQuery = ""
-  const { allMarkdownRemark } = data
-  const posts = allMarkdownRemark.nodes || []
+  const { allMarkdownRemark } = data || {}
+  const posts = allMarkdownRemark?.nodes || []
   const classes = useStyles()
   const [postDetails, setPostDetails] = useState({
     filteredData: [],
@@ -73,10 +73,10 @@ const SearchComponent = data => {
         <Autocomplete
           id="search-post"
           size="small"
-          classes={classes}
-          noOptionsText={'Enter any charecters'}
+          className={classes.inputRoot}
+          noOptionsText={"Enter any charecters"}
           options={postDetails.filteredData}
-          getOptionLabel={option => option.title}
+          getOptionLabel={option => option.title || ""}
           style={{ width: 300 }}
           renderInput={params => (
             <TextField {...params} label="Search Post" variant="outlined" />
