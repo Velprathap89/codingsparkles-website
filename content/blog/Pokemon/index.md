@@ -1,5 +1,5 @@
 ---
-title: Responsive Pokemon App uses Material UI components in React JS
+title: Building a Responsive Pokemon App in React JS Using Material UI Components
 date: "2021-10-31T03:00:00.284Z"
 description: In this article, we are going to learn about creating the responsive Pokemon app using Material UI components in React JS...
 thumb: Pokemon.jpg
@@ -11,7 +11,7 @@ In this article, we are going to learn about creating the responsive Pokemon app
 
 This app contains the following features.
 
-* Grid Display - To display the Pokeman basic details.
+* Grid Display - To display the Pokemon basic details.
 * Dialog - To display more details about the Pokemon.
 * Prev/Next Buttons - To navigate between pages and display the active page Pokemon details.
 * Responsive - Displaying the Pokemon details responsively.
@@ -44,7 +44,7 @@ npm i @material-ui/core @material-ui/icons @material-ui/lab
 
 > **Note:** @material-ui/core, @material-ui/lab package contains the [components](https://v4.mui.com/) and @material-ui/icons package contains the [icons](https://v4.mui.com/components/material-icons/#material-icons).
 
-Also, we need to install the **axios** library by using the following command. Since, we are going to use this axios (post method) to trigger the API request.
+Also, we need to install the [**axios**](https://axios-http.com/) library by using the following command. Since, we are going to use this axios (post method) to trigger the API request.
 
 ```js
 npm i axios
