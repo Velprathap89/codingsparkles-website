@@ -128,7 +128,7 @@ const BlogPostTemplate = props => {
               itemType="http://schema.org/Article"
             >
               <header>
-                <Typography className={classes.typoRoot} variant="h4">
+                <Typography className={classes.typoRoot} variant="h4" component="h1">
                   {post.frontmatter.title}
                 </Typography>
                 <Box className={classes.boxRoot}>

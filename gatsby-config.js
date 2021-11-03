@@ -5,8 +5,8 @@ module.exports = {
       name: `Velmurugan Sivaprakasam`,
       summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
-    description: `Blog website to share that which is known and to learn that which is unknown.`,
-    siteUrl: `https://www.codingsparkles.com/`,
+    description: `Blog Website to share the knowledge related to Web Development`,
+    siteUrl: `https://codingsparkles-dev.netlify.app/`,
     social: {
       twitter: `velmurugan`,
     },
@@ -168,5 +168,8 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
+    "gatsby-plugin-minify",
   ],
 }
