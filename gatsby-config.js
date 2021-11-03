@@ -198,6 +198,17 @@ module.exports = {
         resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
         resolvePagePath: page => page.path,
         resolvePages: data => data.allSitePage.edges,
+        filterPages: (
+          page,
+          excludedRoute,
+          { minimatch, withoutTrailingSlash, resolvePagePath }
+        ) =>
+          minimatch(
+            withoutTrailingSlash(
+              resolvePagePath(page),
+              withoutTrailingSlash(excludedRoute)
+            )
+          ),
         serialize: (page, siteUrl, { resolvePagePath }) => {
           return {
             url: `${siteUrl}${resolvePagePath(page)}`,
