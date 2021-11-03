@@ -174,7 +174,7 @@ module.exports = {
         query: `{
           site {
             siteMetadata {
-              siteUrlNoSlash
+              siteUrl
             }
           }
           allSitePage {
@@ -198,12 +198,12 @@ module.exports = {
           let pages = []
           allSitePage.edges.map(edge => {
             pages.push({
-              url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+              url: site.siteMetadata.siteUrl + edge.node.path,
             })
           })
           allMarkdownRemark.edges.map(edge => {
             pages.push({
-              url: `${site.siteMetadata.siteUrlNoSlash}/${
+              url: `${site.siteMetadata.siteUrl}/${
                 edge.node.fields.slug
               }`,
             })
