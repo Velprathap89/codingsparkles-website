@@ -168,51 +168,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        query: `{
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-              }
-            }
-          }
-        }`,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
-          let pages = []
-          allSitePage.edges.map(edge => {
-            pages.push({
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            })
-          })
-          allMarkdownRemark.edges.map(edge => {
-            pages.push({
-              url: `${site.siteMetadata.siteUrl}/${
-                edge.node.fields.slug
-              }`,
-            })
-          })
- 
-          return pages
-        },
-      },
-    },
+    `gatsby-plugin-sitemap`,
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-minify",
   ],
