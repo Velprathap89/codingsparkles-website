@@ -168,7 +168,51 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrlNoSlash
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${site.siteMetadata.siteUrlNoSlash}/${
+                edge.node.fields.slug
+              }`,
+            })
+          })
+ 
+          return pages
+        },
+      },
+    },
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-minify",
   ],
