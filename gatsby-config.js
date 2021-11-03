@@ -195,19 +195,13 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
-          let pages = []
-          allSitePage.edges.map(edge => {
-            pages.push({
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            })
-          })
-          allMarkdownRemark.edges.map(edge => {
-            pages.push({
-              url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-            })
-          })
-          return pages
+        resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
+        resolvePagePath: page => page.path,
+        resolvePages: data => data.allSitePage.edges.node,
+        serialize: (page, siteUrl, { resolvePagePath }) => {
+          return {
+            url: `${siteUrl}${resolvePagePath(page)}`,
+          }
         },
       },
     },
