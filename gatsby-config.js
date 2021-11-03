@@ -197,7 +197,7 @@ module.exports = {
         }`,
         resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
         resolvePagePath: page => page.path,
-        resolvePages: data => data.allSitePage.edges.node,
+        resolvePages: data => data.allSitePage.edges,
         serialize: (page, siteUrl, { resolvePagePath }) => {
           return {
             url: `${siteUrl}${resolvePagePath(page)}`,
