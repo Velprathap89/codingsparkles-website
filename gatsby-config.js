@@ -169,50 +169,72 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        output: "sitemap.xml",
-        query: `{
+        query: `
+        {
           site {
             siteMetadata {
               siteUrl
             }
           }
           allSitePage {
-            edges {
-              node {
-                path
-              }
+            nodes {
+              path
             }
           }
           allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
+            nodes {
+              frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+              },
+              fields {
+                slug
               }
             }
           }
-        }`,
-        resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
-        resolvePagePath: page => page.path,
-        resolvePages: data => data.allSitePage.edges,
-        filterPages: (
-          page,
-          excludedRoute,
-          { minimatch, withoutTrailingSlash, resolvePagePath }
-        ) =>
-          minimatch(
-            withoutTrailingSlash(
-              resolvePagePath(page),
-              withoutTrailingSlash(excludedRoute)
-            )
-          ),
-        serialize: (page, siteUrl, { resolvePagePath }) => {
-          return {
-            url: `${siteUrl}${resolvePagePath(page)}`,
+        }
+        `,
+        excludes: [
+          '/',
+          '/2/',
+          '/3/',
+          '/tags/java-script/',
+          '/tags/meterial-ui/',
+          '/tags/react-js',
+          '/tags/scss/',
+          '/tags/css/'
+        ],
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMarkdownRemark: { nodes: allPosts },
+        }) => {
+          const pathToDateMap = {}
+
+          allPosts.map(post => {
+            pathToDateMap[post.fields.slug] = { date: post.frontmatter.date }
+          })
+
+          const pages = allPages.map(page => {
+            return { ...page, ...pathToDateMap[page.path] }
+          })
+
+          return pages
+        },
+        serialize: ({ path, date }) => {
+          let entry = {
+            url: path,
+            changefreq: "never",
+            priority: 0.5,
           }
+
+          if (date) {
+            entry.priority = 0.7
+            entry.lastmod = date
+          }
+
+          return entry
         },
       },
     },
