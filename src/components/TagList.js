@@ -2,6 +2,7 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { Paper, Chip, makeStyles, Typography, Box } from "@material-ui/core"
+import { getStyle } from "../Services/common"
 
 const useStyles = makeStyles({
   typoRoot: {
@@ -17,44 +18,11 @@ const useStyles = makeStyles({
     lineHeight: "32px",
     textDecoration: "none",
     display: "block",
-  },
-  reactBg: {
-    backgroundColor: "#DEF3FD",
-  },
-  jsBg: {
-    backgroundColor: "#FED9C9",
-  },
-  cssBg: {
-    backgroundColor: "#FFEFD8",
-  },
-  sassBg: {
-    backgroundColor: "#FFDDE4",
-  },
-  angularBg: {
-    backgroundColor: "#FF7F7F",
-  },
+  }
 })
 
 const TagList = () => {
-  const classes = useStyles()
-
-  const getClassName = tag => {
-    if (tag === "JavaScript") {
-      return "jsBg"
-    }
-    if (tag === "React JS") {
-      return "reactBg"
-    }
-    if (tag === "CSS") {
-      return "csstBg"
-    }
-    if (["Sass", "SCSS"].includes(tag)) {
-      return "sassBg"
-    }
-    if (tag === "Angular") {
-      return "angularBg"
-    }
-  }
+  const classes = useStyles();
 
   const data = useStaticQuery(graphql`
     query {
@@ -86,7 +54,7 @@ const TagList = () => {
           >
             <Chip
               key={tag.fieldValue}
-              className={classes[getClassName(tag.fieldValue)]}
+              style={getStyle(tag.fieldValue)}
               label={`${tag.fieldValue} (${tag.totalCount})`}
               size="medium"
             />

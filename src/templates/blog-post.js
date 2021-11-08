@@ -15,6 +15,7 @@ import Img from "gatsby-image"
 import ArrowBack from "@material-ui/icons/ArrowBack"
 import ArrowForward from "@material-ui/icons/ArrowForward"
 import SocialShare from "../components/SocialShare"
+import { getStyle } from "../Services/common"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -96,23 +97,6 @@ const BlogPostTemplate = props => {
   const tags = post.frontmatter.tags
   const url = typeof window !== "undefined" ? window.location.href : ""
 
-  const getStyle = tag => {
-    if (tag === "JavaScript") {
-      return { backgroundColor: "#FED9C9" }
-    }
-    if (tag === "React JS") {
-      return { backgroundColor: "#DEF3FD" }
-    }
-    if (tag === "CSS") {
-      return { backgroundColor: "#FFEFD8" }
-    }
-    if (["Sass", "SCSS"].includes(tag)) {
-      return { backgroundColor: "#FFDDE4" }
-    }
-    if (tag === "Angular") {
-      return { backgroundColor: "#FF7F7F" }
-    }
-  }
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
