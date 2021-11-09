@@ -16,7 +16,7 @@ npx create-react-app react-dynamic-header
 
 ```
 
-Test the application running status
+Test the application running status.
 
 ```js
 cd react-dynamic-header
@@ -55,25 +55,32 @@ export const headerData = {
 };
 ```
 
-* The *headerData* object holds information about the header component
+* The *headerData* object holds information about the header component.
 
-* The background color value of the header is represented by *bgColor*
+* The background color value of the header is represented by *bgColor*.
 
-* The color value of the header is reprsented by *fontColor*
+* The color value of the header is reprsented by *fontColor*.
 
-* The *title* object contains information about the website title configuration
+* The *title* object contains information about the website title configuration.
   
-  - *name* represents the site's title  
-  - *position* represents the site's title position
-  - *bgColor* represents the color of the title text background
-  - *fontColor* represents the color of the title text font
-  - *margin* represents the title text's margin value
+  - *name* represents the site's title.
 
-* The object "menuDetails" contains information about the website menu configuration
+  - *position* represents the site's title position.
 
-  - *margin* denotes the margin value of a menu item 
-  - *menuList* contains information about the list of menus that will be rendered in the header
+  - *bgColor* represents the color of the title text background.
+
+  - *fontColor* represents the color of the title text font.
+
+  - *margin* represents the title text's margin value.
+
+* The object "menuDetails" contains information about the website menu configuration.
+
+  - *margin* denotes the margin value of a menu item.
+
+  - *menuList* contains information about the list of menus that will be rendered in the header.
+
      - The "name" represents the name of the menu.
+
      - The "order" value represents the menu order; depending on this value, the menu item rendering order is changed.
 
 ## Step 3: Render the Header
@@ -114,15 +121,15 @@ import "./styles.scss";
 
 * The value *title, menuDetails, fontColor, bgColor* is extracted from the headerData.
 
-* To keep the position value, we're creating the *titlePosition* state variable. This value will also change when we select a different position from the options (radio button)
+* To keep the position value, we're creating the *titlePosition* state variable. This value will also change when we select a different position from the options (radio button).
 
 * The *titlePlacementOrder* variable is used to maintain the title placement order; it is set to 1 by default.
 
 * The *menuPlacementOrder* variable is used to keep the menu placement order, which is set to 2 by default.
 
-* The *flexDirection* variable is used to keep the direction of the component placement consistent; by default, it is set to *row*
+* The *flexDirection* variable is used to keep the direction of the component placement; by default, it is set to *row*.
 
-* The array variables *menuItemsGroupA, menuItemsGroupB* are used to keep the menu items in two separate arrays, which is useful for rendering the title in the middle and the menu items on the left and right. Similarly, the variables *groupAMenuPlacementOrder, groupBMenuPlacementOrder* and *groupBMenuPlacementOrder* are used to keep the menu item order when rendering the title in the middle.
+* The array variables *menuItemsGroupA, menuItemsGroupB* are used to keep the menu items in two separate arrays, which is useful for rendering the title in the middle and the menu items on the left and right. Similarly, the variables *groupAMenuPlacementOrder, groupBMenuPlacementOrder* are used to keep the menu item order when rendering the title in the middle.
 
 ### Changing the values of the declared variables
 
@@ -344,6 +351,6 @@ The codesandbox sample is available at the following URL, and it was created usi
 
 https://codesandbox.io/s/tender-feynman-h4sd1
 
-In this article, I showm you how to make a dynamic website header based on its position value. You can experiment by adding your own ideas, working them out, and sharing your feedback.
+In this article, I shown you how to make a dynamic website header based on its position value. You can experiment by adding your own ideas, working them out, and sharing your feedback.
 
 Happy Coding!
