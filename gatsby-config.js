@@ -186,7 +186,7 @@ module.exports = {
           allMarkdownRemark {
             nodes {
               frontmatter {
-                date(formatString: "YYYY-MM-DD)
+                date(formatString: "YYYY-MM-DD")
               },
               fields {
                 slug
