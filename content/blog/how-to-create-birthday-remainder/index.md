@@ -97,21 +97,21 @@ npm i @material-ui/core @material-ui/icons @material-ui/lab
 ```
 * In this section, we set the variables that will be used to create the birthday reminder component.
 
+* The array of birthday data objects is represented by *todayData*.
+
+* The *currentDate* value represents the current date.
+
 * The *classes* variable is used to apply the style class to elements.
 
 * The *todayDate* variable contains information about the current date.
 
 * The *birthObj* contains the person's information.
 
-- The *name* represents the person's name.
+  - The *name* represents the person's name.
 
-- The *imageSrc* represents that person's image url.
+  - The *imageSrc* represents that person's image url.
 
-- The *dob* represents the person's date of birth. In this case, the month and date values are set based on the todayDate value to display the data in the current date period.
-
-* The array of birthday data objects is represented by *todayData*.
-
-* The *currentDate* value represents the current date.
+  - The *dob* represents the person's date of birth. In this case, the month and date values are set based on the todayDate value to display the data in the current date period.
 
 ### Initializing the useEffect and getBirthdayData method
 

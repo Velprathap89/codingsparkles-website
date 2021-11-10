@@ -6,7 +6,7 @@ module.exports = {
       summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
     description: `Blog Website to share the knowledge related to Web Development`,
-    siteUrl: `https://codingsparkles-dev.netlify.app/`,
+    siteUrl: `https://www.codingsparkles.com/`,
     social: {
       twitter: `velmurugan`,
     },
@@ -186,7 +186,7 @@ module.exports = {
           allMarkdownRemark {
             nodes {
               frontmatter {
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "YYYY-MM-DD)
               },
               fields {
                 slug
@@ -200,7 +200,7 @@ module.exports = {
           '/2/',
           '/3/',
           '/tags/java-script/',
-          '/tags/meterial-ui/',
+          '/tags/material-ui/',
           '/tags/react-js',
           '/tags/scss/',
           '/tags/css/'
@@ -226,7 +226,7 @@ module.exports = {
           let entry = {
             url: path,
             changefreq: "never",
-            priority: 0.5,
+            priority: 0.7,
           }
 
           if (date) {
