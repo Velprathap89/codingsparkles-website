@@ -1,5 +1,5 @@
 ---
-title: How to add Doughnet Chart in React JS application and Customize the Tooltip Message?.
+title: How to add Doughnet Chart in React JS application and Customize the Tooltip Message?
 date: "2021-11-06T03:00:00.284Z"
 description: Do you want to know how to include the Doughnet Chart in a React JS application and customise the tooltip message?...
 thumb: Chart.jpg
