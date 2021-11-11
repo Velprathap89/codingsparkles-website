@@ -3,7 +3,7 @@ title: Building a Responsive Pokemon App in React JS Using Material UI Component
 date: "2021-10-31T03:00:00.284Z"
 description: In this article, we are going to learn about creating the responsive Pokemon app using Material UI components in React JS...
 thumb: Pokemon.jpg
-tags: ["React JS", "Meterial UI"]
+tags: ["React JS", "Material UI"]
 ---
 <div class="photo-details">Photo by <a href="https://unsplash.com/@mykelgran?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Rivera 🇵🇭</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 

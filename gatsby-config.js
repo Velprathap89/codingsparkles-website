@@ -5,7 +5,7 @@ module.exports = {
       name: `Velmurugan Sivaprakasam`,
       summary: `who lives in Padi Agraharam (Tiruvannamalai Dt) and works in Chennai building useful things.`,
     },
-    description: `Blog website to share that which is known and to learn that which is unknown.`,
+    description: `Blog Website to share the knowledge related to Web Development`,
     siteUrl: `https://www.codingsparkles.com/`,
     social: {
       twitter: `velmurugan`,
@@ -168,5 +168,77 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allMarkdownRemark {
+            nodes {
+              frontmatter {
+                date(formatString: "YYYY-MM-DD")
+              },
+              fields {
+                slug
+              }
+            }
+          }
+        }
+        `,
+        excludes: [
+          '/',
+          '/2/',
+          '/3/',
+          '/tags/java-script/',
+          '/tags/material-ui/',
+          '/tags/react-js',
+          '/tags/scss/',
+          '/tags/css/'
+        ],
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMarkdownRemark: { nodes: allPosts },
+        }) => {
+          const pathToDateMap = {}
+
+          allPosts.map(post => {
+            pathToDateMap[post.fields.slug] = { date: post.frontmatter.date }
+          })
+
+          const pages = allPages.map(page => {
+            return { ...page, ...pathToDateMap[page.path] }
+          })
+
+          return pages
+        },
+        serialize: ({ path, date }) => {
+          let entry = {
+            url: path,
+            changefreq: "never",
+            priority: 0.7,
+          }
+
+          if (date) {
+            entry.priority = 0.7
+            entry.lastmod = date
+          }
+
+          return entry
+        },
+      },
+    },
+    "gatsby-plugin-robots-txt",
+    "gatsby-plugin-minify",
   ],
 }
