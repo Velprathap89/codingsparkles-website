@@ -1,21 +1,19 @@
 const tagList = [
-  { name: "JavaScript", backgroundColor: "#FED9C9" },
-  { name: "React JS", backgroundColor: "#DEF3FD" },
-  { name: "CSS", backgroundColor: "#FFEFD8" },
-  { name: "SCSS", backgroundColor: "#FFDDE4" },
-  { name: "SASS", backgroundColor: "#FFDDE4" },
-  { name: "Angular", backgroundColor: "#FF7F7F" },
-  { name: "Material UI", backgroundColor: "#90ee90" },
+  { name: "JavaScript", backgroundColor: "#FED9C9", className: 'js-tag' },
+  { name: "React JS", backgroundColor: "#DEF3FD", className: 'react-tag' },
+  { name: "CSS", backgroundColor: "#FFEFD8", className: 'css-tag' },
+  { name: "SCSS", backgroundColor: "#FFDDE4", className: 'scss-tag'},
+  { name: "SASS", backgroundColor: "#FFDDE4", className: 'sass-tag' },
+  { name: "Angular", backgroundColor: "#FF7F7F", className: 'angular-tag' },
+  { name: "Material UI", backgroundColor: "#90ee90", className: 'material-tag' },
 ]
 
-export const getStyle = name => {
+export const getClassName = name => {
   const matchedTag = tagList.filter(
     tag => tag.name.toLowerCase() === name.toLowerCase()
   )
   if (matchedTag && matchedTag.length) {
-    return { backgroundColor: matchedTag[0].backgroundColor }
+    return matchedTag[0].className
   }
-  return {
-    backgroundColor: "#D3D3D3",
-  }
+  return "js-tag"
 }

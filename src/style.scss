@@ -46,6 +46,36 @@ body {
             letter-spacing: 0.00938em;
         }
     }
+
+    .MuiChip-root {
+        &.js-tag {
+            background-color: #FED9C9;
+        }
+
+        &.react-tag {
+            background-color: #DEF3FD;
+        }
+
+        &.css-tag {
+            background-color: #FFEFD8;
+        }
+
+        &.scss-tag {
+            background-color: #FFDDE4;
+        }
+
+        &.sass-tag {
+            background-color: #FFDDE4;
+        }
+
+        &.angular-tag {
+            background-color: #FF7F7F;
+        }
+
+        &.material-tag {
+            background-color: #90ee90;
+        }
+    }
 }
 
 .cs-wrapper {
@@ -75,6 +105,10 @@ body {
                 a {
                     text-decoration: none;
                     color: $fontColor;
+
+                    &.active {
+                        color: $btnColor;
+                    }
                 }
 
                 .about-page,

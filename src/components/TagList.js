@@ -2,7 +2,7 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { Paper, Chip, makeStyles, Typography, Box } from "@material-ui/core"
-import { getStyle } from "../Services/common"
+import { getClassName } from "../Services/common"
 
 const useStyles = makeStyles({
   typoRoot: {
@@ -43,7 +43,7 @@ const TagList = () => {
   return (
     <Paper>
       <Box className={classes.typoRoot}>
-        <Typography variant="h6">Explore Topics</Typography>
+        <Typography variant="h6" component="h1">Explore Topics</Typography>
       </Box>
       <Box className={classes.boxRoot}>
         {data.allMarkdownRemark.group.map(tag => (
@@ -54,7 +54,7 @@ const TagList = () => {
           >
             <Chip
               key={tag.fieldValue}
-              style={getStyle(tag.fieldValue)}
+              className={`${getClassName(tag.fieldValue)}`}
               label={`${tag.fieldValue} (${tag.totalCount})`}
               size="medium"
             />

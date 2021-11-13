@@ -82,7 +82,7 @@ const Contact = ({ data, location }) => {
         <Box
           className={`${classes.boxRoot} ${classes.centerAlign} ${classes.columnDirection}`}
         >
-          <Typography variant="h4" className={classes.gridContent}>
+          <Typography variant="h4" className={classes.gridContent} component="h1">
             Get in touch!
           </Typography>
           <Typography className={classes.paraTypo} paragraph={true}>

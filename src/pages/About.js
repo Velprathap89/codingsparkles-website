@@ -63,7 +63,7 @@ const About = ({ data, location }) => {
         className={`${classes.paperRoot} ${classes.centerAlign} ${classes.columnDirection}`}
       >
         <Box className={classes.titleRoot}>
-          <Typography className={classes.typoRoot} variant="h5">
+          <Typography className={classes.typoRoot} variant="h5" component="h1">
             Hi and welcome to CodingSparkles!
           </Typography>
         </Box>

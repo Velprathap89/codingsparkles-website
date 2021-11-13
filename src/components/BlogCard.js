@@ -64,9 +64,9 @@ const BlogCard = ({ posts }) => {
               <Grid key={post.fields.slug} item xs={12} sm={6} md={4}>
                 <Card className={classes.cardRoot} key={post.fields.slug}>
                   <CardContent className={classes.cardContentRoot}>
-                    <Img fluid={imgSrc} />
+                    <Img fluid={imgSrc} alt={title} />
                     <Box className={classes.cardContentText}>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography gutterBottom variant="h5" component="h1">
                         {title}
                       </Typography>
                       <Typography
