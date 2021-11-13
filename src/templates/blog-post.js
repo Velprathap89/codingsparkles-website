@@ -15,7 +15,7 @@ import Img from "gatsby-image"
 import ArrowBack from "@material-ui/icons/ArrowBack"
 import ArrowForward from "@material-ui/icons/ArrowForward"
 import SocialShare from "../components/SocialShare"
-import { getStyle } from "../Services/common"
+import { getClassName } from "../Services/common"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -120,8 +120,7 @@ const BlogPostTemplate = props => {
                     {tags.map(tag => (
                       <Chip
                         key={tag}
-                        className={classes.chipRoot}
-                        style={getStyle(tag)}
+                        className={`${classes.chipRoot} ${getClassName(tag)}`}
                         label={tag}
                       />
                     ))}
@@ -145,7 +144,7 @@ const BlogPostTemplate = props => {
                 </Box>
               </header>
               <Paper>
-                <Img fluid={imgSrc} />
+                <Img fluid={imgSrc} alt={post.frontmatter.title}/>
               </Paper>
               <Box>
                 <div

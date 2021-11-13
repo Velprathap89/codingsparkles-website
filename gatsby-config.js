@@ -92,6 +92,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `pub-6933193312827048`
+      },
+    },
+    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
@@ -240,5 +246,6 @@ module.exports = {
     },
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-minify",
+    'gatsby-plugin-offline',
   ],
 }
