@@ -30,7 +30,7 @@ cd react-pokemon-app
 npm start
 ```
 
-This will open your browser and the application will be running in the [http://localhost:3000](http://localhost:3000).
+This will open your browser and the application will be running in the [localhost:3000](http://localhost:3000).
 
 ![Application Status](./InitialPage.png)
 
