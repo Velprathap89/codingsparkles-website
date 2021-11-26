@@ -23,7 +23,7 @@ cd react-birthday-reminder
 npm start
 ```
 
-This will launch your browser and launch the application at *http://localhost:3000*.
+This will launch your browser and start the application at localhost:3000.
 
 ![Application Status](./InitialPage.png)
 

@@ -5,7 +5,7 @@ description: Removing an item from the list will be more useful, while working o
 thumb: RemoveItem.jpg
 tags: ["JavaScript"]
 ---
-<div class="photo-details">Image by <a href="https://pixabay.com/users/bru-no-1161770/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3114364">Bruno /Germany</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3114364">Pixabay</a></div>
+<div class="photo-details">Image by Bruno Germany from Pixabay</div>
 
 Removing an item from the list will be more useful, while working on the applications like appointment planner. Because we may need to remove the particular appointment from the list of appointments. In this article, we will explore three different methods of removing an item from the list. 
 

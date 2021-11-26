@@ -97,7 +97,7 @@ const About = ({ data, location }) => {
           </Typography>
           <Container className={`${classes.centerAlign}`}>
             <IconButton
-              href="https://www.linkedin.com/in/velmurugan-sivapraksam-4aa108174"
+              href="https://www.linkedin.com/in/velmurugan-sivaprakasam-4aa108174"
               aria-label="Go to My LinkedIn"
               target="_blank"
             >
