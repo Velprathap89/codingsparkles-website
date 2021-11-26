@@ -23,7 +23,7 @@ cd doughnet-custom-tooltip
 npm start
 ```
 
-This will open your browser and the application will be running in the [localhost:3000](http://localhost:3000).
+This will launch your browser and start the application at localhost:3000.
 
 ![Application Status](./InitialPage.png)
 
