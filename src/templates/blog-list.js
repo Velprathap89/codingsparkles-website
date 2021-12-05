@@ -22,7 +22,7 @@ const BlogIndex = props => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" schemaMarkup={schema} />
+        <Seo title="CodingSparkles - Sharing the Known, Learning the Unknown" schemaMarkup={schema} />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -34,7 +34,7 @@ const BlogIndex = props => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" schemaMarkup={schema} />
+      <Seo title="CodingSparkles - Sharing the Known, Learning the Unknown" schemaMarkup={schema} />
       <BlogCard posts={posts} />
       <Paginator pageContext={pageContext} />
     </Layout>
